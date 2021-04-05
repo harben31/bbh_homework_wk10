@@ -1,0 +1,22 @@
+{
+  "name": "bbh_homework_wk10",
+  "version": "1.0.0",
+  "description": "roster page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harben31/bbh_homework_wk10.git"
+  },
+  "author": "Ben Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harben31/bbh_homework_wk10/issues"
+  },
+  "homepage": "https://github.com/harben31/bbh_homework_wk10#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
