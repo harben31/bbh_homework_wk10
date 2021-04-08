@@ -3,25 +3,26 @@ class Employee {
         this.empName = empName,
         this.id = id,
         this.email = email,
-        this.role = 'Employee',
-        this.questions = [
-            {
-                type: `input`,
-                name: `empName`,
-                message: `Enter employee's name`
-            },
-            {
-                type: `input`,
-                name: `id`,
-                message: `Enter employee's employee ID`
-            },
-            {
-                type: `input`,
-                name: `email`,
-                message : `Enter employee's email`
-            },
-        ]
+        this.role = 'Employee'
     }
+
+    static questions = [
+        {
+            type: `input`,
+            name: `empName`,
+            message: `Enter employee's name`
+        },
+        {
+            type: `input`,
+            name: `id`,
+            message: `Enter employee's employee ID`
+        },
+        {
+            type: `input`,
+            name: `email`,
+            message : `Enter employee's email`
+        },
+    ]
 
     getName(){
         return this.empName;

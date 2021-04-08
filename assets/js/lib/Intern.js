@@ -4,14 +4,40 @@ class Intern extends Employee {
     constructor(empName, id, email, school){
         super(empName, id, email);
 
-        this.school = school,
+        this.opt3Answer = school,
+        this.opt3 = 'School: '
         this.role =  'Intern'
-        // ,this.questions = this.questions.push(`{
-        //     type: \`input\`,
-        //     name: \`intSchool\`,
-        //     message: \`Enter you Interns's school.\` 
-        // }`)
     }
+
+   static questions = [
+        {
+            type: `input`,
+            name: `empName`,
+            message: `Enter employee's name`
+        },
+        {
+            type: `input`,
+            name: `id`,
+            message: `Enter employee's employee ID`
+        },
+        {
+            type: `input`,
+            name: `email`,
+            message : `Enter employee's email`
+        },
+        {
+            type: `input`,
+            name: `opt3`,
+            message: `Enter you interns's school's name.` 
+        },
+        {
+            type: `list`,
+            name: `roleList`,
+            message: `Would you like to add an employee to your roster?`,
+        
+            choices: [`Engineer`, `Intern`, `I am done`]
+        }
+    ]
 
     getSchool(){
         return this.school

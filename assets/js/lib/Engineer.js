@@ -4,14 +4,41 @@ class Engineer extends Employee {
     constructor(empName, id, email, gitHub){
         super(empName, id, email);
 
-        this.gitHub = gitHub,
+        this.opt3Answer = gitHub,
+        this.opt3 = 'GitHub: '
         this.role = 'Engineer'
-        // ,this.questions = this.questions.push(`{
-        //     type: \`input\`,
-        //     name: \`engGitHub\`,
-        //     message: \`Enter you engineer's github username.\` 
-        // }`)
+        
     }
+
+    static questions = [
+        {
+            type: `input`,
+            name: `empName`,
+            message: `Enter employee's name`
+        },
+        {
+            type: `input`,
+            name: `id`,
+            message: `Enter employee's employee ID`
+        },
+        {
+            type: `input`,
+            name: `email`,
+            message : `Enter employee's email`
+        },
+        {
+            type: `input`,
+            name: `opt3`,
+            message: `Enter you engineer's github username.` 
+        },
+        {
+            type: `list`,
+            name: `roleList`,
+            message: `Would you like to add an employee to your roster?`,
+        
+            choices: [`Engineer`, `Intern`, `I am done`]
+        }
+    ]
 
     getGitHub(){
         return this.gitHub
