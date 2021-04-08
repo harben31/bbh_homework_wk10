@@ -9,10 +9,6 @@ class Manager extends Employee {
         this.role = 'Manager'
     }
 
-    getOfficeNumber(){
-        return this.officeNumber
-    }
-
     static questions = [
         {
         type: `input`,
@@ -44,6 +40,10 @@ class Manager extends Employee {
         choices: [`Engineer`, `Intern`, `I am done`]
     }
     ]
+
+    getOfficeNumber(){
+        return this.opt3Answer
+    }
 
 }
 

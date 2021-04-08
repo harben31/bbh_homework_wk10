@@ -42,7 +42,7 @@ const buildHtml = () => {
                 <h1>R o s t e r</h1>
             </header>
             <div id="cardWrap">
-                
+                ${buildCards()}
             </div>
         </main>
         <script src="./assets/js/index.js"></script>
@@ -55,7 +55,12 @@ const buildHtml = () => {
 const buildCards = ()=>{
     
     for (let i = 0; i < empArray.length; i++) {
-        
+        let otp3Opt;
+        if(empArray[i].role==='Engineer'){
+            opt3Opt = `<p class="opt3 cardInfo"> GitHub: <a href='https://github.com/${empArray[i].opt3Answer}' target='blank'> ${empArray[i].opt3Answer}</a></p>`
+        } else{
+            opt3Opt = `<p class="opt3 cardInfo">${empArray[i].opt3} ${empArray[i].opt3Answer}</p>`
+        }
             empCardArray.push(`<div class="cardColumn">
             <div class="cardHeader">
                 <h3 class="name">${empArray[i].empName}</h3>
@@ -63,14 +68,15 @@ const buildCards = ()=>{
             </div>
             <div class="infoWrap">
                 <p class="id cardInfo">Employee ID: ${empArray[i].id} 123</p>
-                <p class="email cardInfo">Email: <a href='mailto:${empArray[i].email}>${empArray[i].email}</p>
-                <p class="opt3 cardInfo">${empArray[i].opt3} ${empArray[i].opt3Answer}</p>
+                <p class="email cardInfo">Email: <a href='mailto:${empArray[i].email}'>${empArray[i].email}</a></p>
+                ${opt3Opt}
             </div>
-        </div>`)
+        </div>
+        `)
     }
-
-    console.log(empArray);
-    console.log(empCardArray);
+    // console.log(empArray);
+    // console.log(empCardArray);
+    return empCardArray.join('')
 }
 
 const empArray = [];//holding emp info

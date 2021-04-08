@@ -4,7 +4,7 @@ describe('Engineer', ()=>{
     it('should have "name", "id", "email" and "school" properties and methods to get each of those values.', ()=>{
         const intern = new Intern('Bob', 12, 'email@email.email', 'hogWarts')
 
-        expect(intern.school).toEqual('hogWarts')
+        expect(intern.opt3Answer).toEqual('hogWarts')
         expect(intern.empName).toEqual('Bob');
         expect(intern.id).toEqual(12);
         expect(intern.email).toEqual('email@email.email')

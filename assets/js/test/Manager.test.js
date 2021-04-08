@@ -4,7 +4,7 @@ describe('Manager', ()=>{
     it('should have "name", "id", "email" and "officeNumber" properties and methods to get each of those values.', ()=>{
         const manager = new Manager('Bob', 12, 'email@email.email', 24)
 
-        expect(manager.officeNumber).toEqual(24);
+        expect(manager.opt3Answer).toEqual(24);
         expect(manager.empName).toEqual('Bob');
         expect(manager.id).toEqual(12);
         expect(manager.email).toEqual('email@email.email')

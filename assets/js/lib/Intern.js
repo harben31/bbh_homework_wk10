@@ -40,7 +40,7 @@ class Intern extends Employee {
     ]
 
     getSchool(){
-        return this.school
+        return this.opt3Answer
     }
 
 }
