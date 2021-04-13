@@ -29,7 +29,7 @@ class Engineer extends Employee {
         {
             type: `input`,
             name: `opt3`,
-            message: `Enter you engineer's github username.` 
+            message: `Enter you engineer's github username` 
         },
         {
             type: `list`,

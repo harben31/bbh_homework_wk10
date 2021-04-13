@@ -23,7 +23,7 @@ class Manager extends Employee {
     {
         type: `input`,
         name: `email`,
-        message: `what is your email?`
+        message: `Enter your email`
     },
     {
         type: `list`,

@@ -28,7 +28,7 @@ class Intern extends Employee {
         {
             type: `input`,
             name: `opt3`,
-            message: `Enter you interns's school's name.` 
+            message: `Enter you interns's school's name` 
         },
         {
             type: `list`,

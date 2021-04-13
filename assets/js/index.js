@@ -6,20 +6,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-const bill = new Employee('Bill', 100, 'bill@bill.bill');
-// console.log(bill)
-
-const jenny = new Manager('Jenny', 200, 'jenny@jenny.jenny', 123);
-// console.log(jenny);
-
-const borke = new Engineer('Borke', 300, 'borke@borke.borke', 'borkeHub');
-// console.log(borke.questions);
-
-const phill = new Intern('Phill', 400, 'phill@me.up', 'phillschool');
-// console.log(phill)
-
-// console.log(Engineer.questions);
-
 const empCardArray = []; //put template literale cards here
 
 const buildHtml = () => {
@@ -48,8 +34,7 @@ const buildHtml = () => {
         <script src="./assets/js/index.js"></script>
     </body>
     </html>`,
-    (err)=>console.log(err))
-    buildCards();
+    (err)=>console.log("fs.writeFile ", err))
 }
 
 const buildCards = ()=>{
@@ -74,8 +59,7 @@ const buildCards = ()=>{
         </div>
         `)
     }
-    // console.log(empArray);
-    // console.log(empCardArray);
+
     return empCardArray.join('')
 }
 
@@ -94,7 +78,7 @@ const empInputFn = (role)=>{
         }
     })
     .catch((err)=>{
-        console.log(err)
+        console.log("promp ",  err)
     })
 }
 
